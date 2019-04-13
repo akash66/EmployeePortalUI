@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Date of Birth</th>
+      <th scope="col">Department</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of $userList | async">
+      <th scope="row">{{user.firstName}}</th>
+      <th scope="row">{{user.lastName}}</th>
+      <th scope="row">{{user.gender}}</th>
+      <th scope="row">{{user.dateOfBirth | date}}</th>
+      <th scope="row">{{user.department}}</th>
+     
+    </tr>
+   
+  </tbody>
+</table>
